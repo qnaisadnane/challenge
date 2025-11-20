@@ -440,11 +440,11 @@ let spaceData = {
 
 // CHALLENGE 1: Count how many destinations we have
 // RESTRICTION use Only for, while, and standard logic.
-function countTotalDestinations(e) {
-   for(let i=0;i<e.length;i++){
-    console.log(e[i]);
+function countTotalDestinations(destination) {
+   for(let i=0;i<destination.length;i++){
+    console.log(destination[i]);
    }
-    return e;
+    return destination;
 }
 
 // CHALLENGE 2: Find destinations that are available for booking
@@ -455,16 +455,16 @@ function getAvailableDestinations(e) {
 
 // CHALLENGE 3: Get the very first booking in our system
 // RESTRICTION use Only for, while, and standard logic.
-function getFirstBooking(e) {
-    console.log(e[0].booking);
+function getFirstBooking(booking) {
+    console.log(booking[0]);
 }
 
 // CHALLENGE 4: Calculate how much money we've made from all bookings
 // NO RESTRICTION You are encouraged to use map, filter, reduce, and Object.keys/Object.values/Object.entries where appropriate.
-function calculateTotalRevenue(e) {
+function calculateTotalRevenue(booking) {
     let sum = 0;
-    for(let i=0;i<e.length;i++){
-        sum += e[i].totalPrice; 
+    for(let i=0;i<booking.length;i++){
+        sum += booking[i].totalPrice; 
     }
     return sum;
 }
@@ -480,40 +480,40 @@ function findUserByEmail(email) {
          }
     }
    console.log(eml); 
-}
+}booking
 
 // CHALLENGE 6: Count all passengers across every booking
 // RESTRICTION use Only for, while, and standard logic.
-function countTotalPassengers(e) {
+function countTotalPassengers() {
    let total = 0;
-   for(let i=0;i<e.length;i++){
-    total +=e[i].passengers;
+   for(let i=0;i<booking.length;i++){
+    total +=booking[i].passengers;
    }
     return total; 
 }
 
 // CHALLENGE 7: Group bookings by their status (confirmed, pending, etc.)
 // NO RESTRICTION You are encouraged to use map, filter, reduce, and Object.keys/Object.values/Object.entries where appropriate.
-function groupBookingsByStatus(e) {
+function groupBookingsByStatus(booking) {
     // We want an object that looks like:
     // {
     //   confirmed: [booking1, booking2...],
     //   pending: [booking3...]
     // }
       {
-          booking.filter(e=> e.status ==="confirmed");
-          booking.filter(e=> e.status ==="pending");
-          booking.filter(e=> e.status ==="cancled");
+          booking.filter(e=> booking.status ==="confirmed");
+          booking.filter(e=> booking.status ==="pending");
+          booking.filter(e=> booking.status ==="cancled");
       }
 }
 
 // CHALLENGE 8: Find the most expensive booking
 // RESTRICTION use Only for, while, and standard logic.
-function findMostExpensiveBooking(e) {
+function findMostExpensiveBooking(booking) {
     let maxprice = 0;
-       for(let i = 0;i<e.length; i++){
-           if(e[i] > maxprice){
-             maxprice = e[i];
+       for(let i = 0;i<booking.length; i++){
+           if(booking[i] > maxprice){
+             maxprice = booking[i];
            }
        }
     return maxprice;
@@ -549,7 +549,7 @@ function calculateRevenueByDestination(e) {
     // { 'Moon Base Alpha': 195000, 'Mars Colony One': 250000 }
        
     for(let i = 0; i<e.length; i++){
-        
+
     }  
 
 }
